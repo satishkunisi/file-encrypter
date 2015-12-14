@@ -20,6 +20,10 @@ module FileEncrypter
 
     attr_reader :file
 
+    def delete!
+      File.delete(file.path)
+    end
+
     def each_chunk
       last_chunk_idx = chunks_in_file
 

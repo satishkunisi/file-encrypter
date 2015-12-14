@@ -8,6 +8,18 @@ module FileEncrypter
       @output_file = FileWrapper.new(file: options[:output_file], chunk_size: options[:chunk_size])
       @strategy = options[:strategy].send(:new, options[:key]) 
     end
+    
+    def cleanup_files!
+      [input_file, output_file].each do |f|  
+        begin 
+          f.delete! 
+        rescue
+          false
+        else
+          true
+        end
+      end 
+    end
 
     def encrypt!
       input_file.each_chunk do |chunk, idx, last_idx|
