@@ -9,14 +9,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Satish Kunisi"]
   spec.email         = ["kunisi@gmail.com"]
   spec.summary       = %q{A streaming symmetric file encrypter built on RbNaCl.}
-  spec.description   = "TODO" 
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = "WIP Do not use in production." 
+  spec.homepage      = "http://github.com/satishkunisi/file-encrypter"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "http://gemserver.satishkunisi.com"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
